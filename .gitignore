@@ -1,4 +1,33 @@
-.idea
-venv
-mysql
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Python specific (for backend)
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+venv/
+.venv/
+.idea/
 .env
+# db.sqlite3
+mysql/
+
+# Frontend-specific ignores (original rules from frontend/.gitignore, now updated for root)
+frontend/node_modules
+frontend/build/
+frontend/.pnp/
+frontend/.pnp.js
+frontend/coverage/
+
+# Misc common ignores (remain the same, as they apply to whole repo)
+.DS_Store
+# Note: If .env.local, .env.development.local etc. were only in frontend,
+# you might want to adjust them as frontend/.env.local if you have other .env files in root
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
